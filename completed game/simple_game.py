@@ -1,29 +1,6 @@
 import json
 import time
 import random
-# class Unit: # Note that the smallest combat functioning unit is a company (100 troops): (Swordsmen/Spearmen: 60), (Archers: 30), (Elites: 10).
-#     def __init__(self, type_unit, mele, ranged, elites, kingdom):
-#         self.type = type_unit.lower()
-#         self.mele = mele
-#         self.ranged = ranged
-#         self.elites = elites
-#         self.kingdom = kingdom.capitalize()
-        
-#         if self.type == 'company':
-#             self.size = 100
-#             self.army_in_terms_of_companies = [50]
-#             print(f"Kingdom of {self.kingdom}'s {self.army_in_terms_of_companies[45]} Company.")
-    
-#     def action(self, action, which_unit_flank=None):
-#         self.which_unit_flank = which_unit_flank
-#         self.action = action
-#         self.commands = set('advance', 'halt', 'retreat', 'fallback')
-#         if self.action not in self.commands:
-#             print('Not valid movement')
-#         print(f'{self.which_unit_flank} {self.direction} towards enemy.')
-        
-#     def attack(self):
-#         self.units_attack_power = (self.mele * 3) + (self.ranged * 3) + (self.elites * 6)
 
 class Soldier:
     def __init__(self, type_unit: str = "levy", race: str = "human", name: str = 'Regular Levy'):
@@ -165,7 +142,6 @@ def main():
     print("2. Exit")
     choice = input("Choose: ")
     if choice == "1":
-        # Your existing battle code
         human = Soldier("mage", "human", "Hero")
         human2 = Soldier('archer', 'elf', 'Enemy')
         human.turn(human2, 1)
